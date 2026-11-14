@@ -6,6 +6,10 @@
 /*   By: labusheh <labusheh@student.42amman.com>   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/14 23:22:53 by labusheh         #+#    #+#              */
-/*   Updated: 2026/11/14 23:23:05 by labusheh        ###   ########.fr        */
+/*   Updated: 2026/11/14 23:42:42 by labusheh        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h
+
+kkkkk
