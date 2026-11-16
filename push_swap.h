@@ -6,7 +6,7 @@
 /*   By: dnasrall <dnasrall@student.42amman.com>   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/16 13:23:48 by dnasrall         #+#    #+#              */
-/*   Updated: 2026/11/16 16:36:33 by dnasrall        ###   ########.fr        */
+/*   Updated: 2026/11/16 17:23:35 by dnasrall        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typedef struct s_bench
 }	t_bench;
 typedef struct s_data
 {
-	t_stack	*b;
+	t_stack	*a;
 	t_stack	*b;
 	t_bench	counter;
 }	t_data;
@@ -58,4 +58,6 @@ void	rr(t_data *data);
 void	rra(t_data *data);
 void	rrb(t_data *data);
 void	rrr(t_data *data);
+
+int	swap_stack(t_stack *stack);
 #endif
