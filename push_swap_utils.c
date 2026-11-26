@@ -38,43 +38,23 @@ int take_put(t_stack *stack_d,t_stack *stack_s)
 {
 	t_node *s;
 	t_node *d;
-	t_node *tmp;
+
 	s=stack_s->top;
 	d = stack_d->top;
-
 	if(s == NULL)
 	return (0);
-	if(d == NULL)
-	{
-		stack_d->top= s;
-		stack_d->bottom=s;
-		if(s->next != NULL)
-		{
-		stack_s->top=s->next;
-		stack_s->top->prev=NULL;
-		}
-		else
-		stack_s->top=NULL;
-		stack_s->bottom=NULL;
-		
-	}
-	else
-	{
-		tmp = stack_d->top ;
-		stack_d->top = s;
-		if(s->next != NULL)
-		{
-			stack_s->top=s->next;
+	stack_s->top=s->next;
+	if(s->next != NULL)
 			stack_s->top->prev=NULL;
-		}
-		else
-		{
-			stack_s->top=NULL;
+	else
 			stack_s->bottom=NULL;
-		}
-		stack_d->top->next = tmp;
-		tmp->prev=stack_d->top;
-		stack_d->top->prev=NULL;
-	}
+	stack_d->top = s;
+	if(d== NULL)
+		stack_d->bottom=s;
+	else
+		d->prev=stack_d->top;
+	s->next=d;
+	stack_d->size++;
+	stack_s->size--;
 	return (1);
 }
